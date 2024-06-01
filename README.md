@@ -56,8 +56,8 @@ SAUCE_ACCESS_KEY=<SAUCE_ACCESS_KEY>
 
 - Provide the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` for secret manager for all passwords and sensitive data
 
-All Browser and devices Desired Capability/Config are set in `devices` folder 
-![image](https://github.com/afsarali-pg/pg-wdio-automation/assets/106514237/0f9cec71-7171-4424-81bf-575ed08ed70b)
+All Browser and devices Desired Capability/Config are set in <br>`devices` folder 
+ ---> | api | mobile | web | -->  api.json, mobile.json, web.json
 
 
 
