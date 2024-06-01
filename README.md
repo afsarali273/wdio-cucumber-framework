@@ -41,14 +41,17 @@ SAUCE_USERNAME=<SAUCE_USERNAME>
 SAUCE_ACCESS_KEY=<SAUCE_ACCESS_KEY>
 
 ```
+<hr>
 
-**Note:**
--
-- For Mobile Testing, you need to provide the `APP_PATH`, `RUN_DEVICE=android/ios` Android ( `APP_PACKAGE`, `APP_ACTIVITY`), `UI_TEST=true`
-- For Remote Execution for Mobile App, you need to provide the `REMOTE_EXECUTION=Y`, `SAUCE_TUNNEL_IDENTIFIER`, `SAUCE_USERNAME`, `SAUCE_ACCESS_KEY`
-- For Web Testing, you need to provide the `BROWSER`, `RUN_DEVICE=desktop/mobile/tablet`, `HEADLESS`, `UI_TEST=true`
-- For API Testing, you need to provide the `UI_TEST=false`
----
+## Usage Instructions
+
+| Testing Type                      | Parameters Required in .en file                                                                                                                                                                                                                                        |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Mobile Testing**                | - `APP_PATH`: Path to the mobile application.<br>- `RUN_DEVICE`: Specify either `android` or `ios`.<br>- For Android:<br>  - `APP_PACKAGE`: Android application package name.<br>  - `APP_ACTIVITY`: Android application activity name.<br>- `UI_TEST`: Set to `true`. |
+| **Remote Execution for Mobile App** | - `REMOTE_EXECUTION`: Set to `Y`.<br>- `SAUCE_TUNNEL_IDENTIFIER`: Identifier for the Sauce Labs tunnel.<br>- `SAUCE_USERNAME`: Your Sauce Labs username.<br>- `SAUCE_ACCESS_KEY`: Your Sauce Labs access key.                                                          |
+| **Web Testing**                   | - `BROWSER`: Desired browser for testing.<br>- `RUN_DEVICE`: Choose from `desktop`, `mobile`, or `tablet`.<br>- `HEADLESS`: Whether to run tests in headless mode.<br>- `UI_TEST`: Set to `true`.                                                                      |
+| **API Testing**                   | - `UI_TEST`: Set to `false`.                                                                                                                                                                                                                                           |
+
 ***Additional Information:***
 
 - Provide the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` for secret manager for all passwords and sensitive data
@@ -88,6 +91,7 @@ For Web
 @REGION=SG
 @SUITE=regression or smoke
 @SERVICE=some-service
+@FEATURE=your-feature
 @TYPE=ui
 @DEVICE=desktop
 @DEVICE=tablet
@@ -99,6 +103,7 @@ For Mobile App
 @REGION=SG
 @SUITE=regression or smoke
 @SERVICE=some-service
+@FEATURE=your-feature
 @TYPE=ui
 @DEVICE=android
 @DEVICE=ios
@@ -110,6 +115,7 @@ For API
 @REGION=SG 
 @SUITE=regression or smoke
 @SERVICE=some-service
+@FEATURE=your-feature
 @TYPE=api 
 ```
 
