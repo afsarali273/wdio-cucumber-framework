@@ -1,0 +1,28 @@
+{
+  "android": [{
+    "appium:platformName": "Android",
+    "appium:deviceName": "R92W4053Y4W",
+    "appium:app": "/Users/mohammedafsar/Repository/POC/pg-wdio-cucumber/app/android/app-sg-internal-release.apk",
+    "appium:appWaitActivity": "com.allproperty.android.consumer.MainActivity",
+    "appium:appPackage": "com.allproperty.android.consumer.sg.internal",
+    "appium:appActivity": "com.allproperty.android.consumer.MainActivity",
+    "appium:noReset": true,
+    "appium:waitforTimeout": 300,
+    "appium:commandTimeout": 3000,
+    "appium:automationName": "UiAutomator2",
+    "appium:autoGrantPermissions": true
+  }],
+    "ios": [
+      {
+        "appium:platformName": "iOS",
+        "appium:automationName": "XCUITest",
+        "appium:platformVersion": "17.2",
+        "appium:app": "/Users/mohammedafsar/Repository/POC/pg-wdio-cucumber/app/ios/SG.internal.app",
+        "appium:deviceName": "iPhone 15",
+        "appium:noReset": false,
+        "appium:autoGrantPermissions": true,
+        "appium:autoAcceptAlerts": true
+      }
+    ]
+
+}

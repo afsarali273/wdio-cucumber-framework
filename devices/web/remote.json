@@ -1,0 +1,31 @@
+{
+  "desktop": [
+    {
+      "browserName": "chrome",
+      "selenoid:options": {
+        "enableVNC": true,
+        "enableVideo": false
+      }
+    }
+  ],
+  "mobile": [
+    {
+      "selenoid:options": {
+        "browserName": "chrome",
+        "version": "mobile-86.0",
+        "enableVNC": true,
+        "enableVideo": false
+      }
+    }
+    ],
+  "tablet": [
+    {
+      "selenoid:options": {
+        "browserName": "chrome",
+        "version": "100.0",
+        "enableVNC": true,
+        "enableVideo": false
+      }
+    }
+    ]
+}

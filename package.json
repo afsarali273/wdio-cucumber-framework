@@ -1,0 +1,40 @@
+{
+  "name": "wdio-cucumber-framework",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/appium-service": "^8.34.1",
+    "@wdio/cli": "^8.33.1",
+    "@wdio/cucumber-framework": "^8.33.1",
+    "@wdio/local-runner": "^8.33.1",
+    "@wdio/sauce-service": "^8.36.1",
+    "@wdio/spec-reporter": "^8.32.4",
+    "appium": "^2.5.1",
+    "dotenv": "^16.3.1",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.2",
+    "wdio-cucumberjs-json-reporter": "^5.2.1"
+  },
+  "scripts": {
+    "test:web": "wdio run ./wdio.conf.ts  -- --tags @TYPE=ui ",
+    "test:api": "wdio run ./wdio.conf.ts  -- --tags @TYPE=api ",
+    "test:android": "wdio run ./wdio.conf.ts  -- --tags @DEVICE=android ",
+    "test:ios": "wdio run ./wdio.conf.ts  -- --tags @DEVICE=ios "
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.535.0",
+    "@cucumber/cucumber": "^10.7.0",
+    "@cucumber/tag-expressions": "^6.1.0",
+    "@types/axios": "^0.14.0",
+    "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.7.2",
+    "cucumber-html-reporter": "^5.5.0",
+    "js-yaml": "^4.1.0",
+    "winston": "^3.12.0"
+  }
+}

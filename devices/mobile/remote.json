@@ -1,0 +1,33 @@
+{
+  "android": [
+    {
+      "platformName": "Android",
+      "appium:app": "storage:filename=app-sg-internal-release.apk",
+      "appium:deviceName": "Android GoogleAPI Emulator",
+      "appium:platformVersion": "current_major",
+      "appium:automationName": "UiAutomator2",
+      "sauce:options": {
+        "appiumVersion": "latest",
+        "build": "appium-build2-0UMT5",
+        "name": "Afsar Test 1",
+        "deviceOrientation": "PORTRAIT"
+      }
+    }
+  ],
+
+    "ios": [
+      {
+        "platformName": "iOS",
+        "appium:app": "storage:filename=SG.internal.zip",
+        "appium:deviceName": "iPhone Simulator",
+        "appium:platformVersion": "current_major",
+        "appium:automationName": "XCUITest",
+        "appium:autoAcceptAlerts": true,
+        "sauce:options": {
+          "build": "appium-build-0UMT5",
+          "name": "Afsar Test",
+          "deviceOrientation": "PORTRAIT"
+        }
+      }
+    ]
+}
