@@ -4,21 +4,17 @@ import * as fs from 'fs';
 import * as yaml from 'js-yaml';
 import { RunContext } from '../utils/run-context.ts';
 import { CustomLogger } from '../utils/logger.ts';
-import { TestConfig } from './model/test-config.ts';
-import { AwsSecretManager } from '../utils/secret-manager.ts';
+// import { AwsSecretManager } from '../utils/secret-manager.ts';
 
 let baseConfig: AutomationConfig;
 
-
 let yaml_data: any;
- let testConfig: TestConfig;
 
 let runContext: RunContext;
 
 const scenarioContext: ScenarioContext = new ScenarioContext();
 
 const envData = process.env;
-// let apiConfigs: ApiConfig[];
  let secrets: { [key: string]: string };
  let stepLogger: CustomLogger;
 
@@ -28,23 +24,16 @@ export async function setup(): Promise<void> {
      yaml_data =  loadYamlData();
      runContext = new RunContext();
   try {
-    const secretManager = new AwsSecretManager(envData.AWS_ACCESS_KEY_ID, envData.AWS_SECRET_ACCESS_KEY);
-    secrets = await secretManager.fetchSecrets();
+    // const secretManager = new AwsSecretManager(envData.AWS_ACCESS_KEY_ID, envData.AWS_SECRET_ACCESS_KEY); // TODO: Add the AWS keys to the env file
+    // secrets = await secretManager.fetchSecrets();
   } catch (error) {
     console.error('Error while fetching aws secrets, Will continue to run the tests');
   }
 }
 
 
-// @ts-ignore
 export function automationConfigBuilder(envData) {
   const automationConfig = new AutomationConfig();
-
-  //const baseConfig = new BaseConfig();
-  //testConfig = baseConfig.getConfig();
-  // const apiConfigObj = new ApiConfigBuilder(envData);
-  // apiConfigs = apiConfigObj.getApiConfigs();
-  // automationConfig.apiConfig = apiConfigs;
 
   const uiConfig = new UiConfig();
   uiConfig.browserType = envData.BROWSER_NAME;
@@ -80,4 +69,4 @@ export  function loadYamlData() {
   }
 }
 
-export {envData,testConfig,stepLogger,runContext,secrets, baseConfig, yaml_data, scenarioContext};
+export {envData,stepLogger,runContext,secrets, baseConfig, yaml_data, scenarioContext};

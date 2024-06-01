@@ -1,5 +1,4 @@
 export class AutomationConfig {
-  //apiConfig: ApiConfig[];
   mobileAppConfig?: AppConfig;
   uiConfig: UiConfig;
   environment: string;
@@ -10,12 +9,6 @@ export class AutomationConfig {
   isMobileApp: boolean = false;
   isApiTest: boolean = false;
   device: string;
-}
-
-export class ApiConfig {
-  serviceName: string ;
-  url: string ;
-  pgdomain_url: string;
 }
 
 export class AppConfig {

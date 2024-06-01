@@ -16,7 +16,7 @@ Create a .env file in the root directory and add the following variables
 ENVIRONMENT=integration
 COUNTRY=SG
 # desktop, mobile, tablet, App(android, ios)
-RUN_DEVICE=ios
+RUN_DEVICE=desktop
 # Y = yes , N = No
 REMOTE_EXECUTION=N
 # Set false for API testing
@@ -34,9 +34,9 @@ PARALELL_INSTANCES=1
 
 # Required for App testing
 APP_PATH=<path to apk/IPA file>
-APP_PACKAGE=com.allproperty.android.consumer.sg.internal
-APP_ACTIVITY=com.allproperty.android.consumer.MainActivity
-SAUCE_TUNNEL_IDENTIFIER=fintechteam_tunnel_name
+APP_PACKAGE=<APP_PACKAGE>
+APP_ACTIVITY=<APP_ACTIVITY>
+SAUCE_TUNNEL_IDENTIFIER=<SAUCE_TUNNEL_IDENTIFIER>
 SAUCE_USERNAME=<SAUCE_USERNAME>
 SAUCE_ACCESS_KEY=<SAUCE_ACCESS_KEY>
 
@@ -84,44 +84,33 @@ npm run test:api
 
 For Web 
 ```
-@TEAM=fintech
-@FEATURE=pre-qualification
-@SITE=consumer
+@TEAM=your-team
 @REGION=SG
-@SUITE=regression
-@SERVICE=fintech-webtools
-@EPIC=FINTECH-4549
+@SUITE=regression or smoke
+@SERVICE=some-service
 @TYPE=ui
 @DEVICE=desktop
 @DEVICE=tablet
-@PAGE=pre-qual-lead
 ```
 
 For Mobile App
 ```
 @TEAM=fintech
-@FEATURE=some-feature
 @REGION=SG
-@SUITE=regression
+@SUITE=regression or smoke
 @SERVICE=some-service
-@EPIC=FINTECH-4549
 @TYPE=ui
 @DEVICE=android
 @DEVICE=ios
-@PAGE=some-page
 ```
 
 For API
 ```
-@TEAM=fintech 
-@FEATURE=self-serve-formal 
-@SITE=consumer 
+@TEAM=yout-team 
 @REGION=SG 
-@SUITE=regression 
-@SERVICE=fintech-api
-@EPIC=FINTECH-5197 
+@SUITE=regression or smoke
+@SERVICE=some-service
 @TYPE=api 
-@ENDPOINT=/v1/sg/self-serve/application
 ```
 
 ## Test Reports
